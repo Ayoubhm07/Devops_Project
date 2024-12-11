@@ -1,0 +1,12 @@
+services:
+
+  mysqldb:
+    image: hammoudiayoub/events:latest
+    container_name: devops-project
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/ResDB?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - "8083:8083"
